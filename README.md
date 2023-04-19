@@ -21,34 +21,65 @@ Remix is a full stack web framework that lets you focus on the user interface an
 {Make a list of websites that you found helpful in this project}
 * [Remix](https://remix.run/)
 
+# Welcome to Remix!
 
-# Netlify Remix Template
+- [Remix Docs](https://remix.run/docs)
+- [Netlify Functions](https://www.netlify.com/products/functions/)
 
-Welcome to the Netlify Remix Template project.
+## Netlify Setup
 
-To use the template, run
+1. Install the [Netlify CLI](https://www.netlify.com/products/dev/):
 
-```bash
-npx create-remix@latest --template netlify/remix-template
+```sh
+npm i -g netlify-cli
 ```
 
-This project includes:
+If you have previously installed the Netlify CLI, you should update it to the latest version:
 
-- Netlify Functions template for Remix sites
-- Netlify Edge Functions template for Remix sites
+```sh
+npm i -g netlify-cli@latest
+```
+
+2. Sign up and log in to Netlify:
+
+```sh
+netlify login
+```
+
+3. Create a new site:
+
+```sh
+netlify init
+```
 
 ## Development
 
-There is no need to run `npm install` as this is a template. The Remix CLI will install the dependencies for you. Make changes to files as you see fit. If there are transformations for files for either the Netlify Functions or Netlify Edge Functions template, make the appropriate changes to the `remix.init/index.js` file.
+The Remix dev server starts your app in development mode, rebuilding assets on file changes. To start the Remix dev server:
 
-If you're new to Remix stacks and the remix.init concept, see the official [Remix Stacks](https://remix.run/stacks) documentation.
-
-### Testing your changes
-
-Run
-
-```bash
-npx create-remix@latest --template ./
+```sh
+npm run dev
 ```
 
-to test your changes to the template. Follow the steps the Remix CLI prompts you with to create a new project. Ensure to test for both the Netlify Functions template and the Netlify Edge Functions template.
+Open up [http://localhost:3000](http://localhost:3000), and you should be ready to go!
+
+The Netlify CLI builds a production version of your Remix App Server and splits it into Netlify Functions that run locally. This includes any custom Netlify functions you've developed. The Netlify CLI runs all of this in its development mode.
+
+```sh
+netlify dev
+```
+
+Open up [http://localhost:3000](http://localhost:3000), and you should be ready to go!
+
+Note: When running the Netlify CLI, file changes will rebuild assets, but you will not see the changes to the page you are on unless you do a browser refresh of the page. Due to how the Netlify CLI builds the Remix App Server, it does not support hot module reloading.
+
+## Deployment
+
+There are two ways to deploy your app to Netlify, you can either link your app to your git repo and have it auto deploy changes to Netlify, or you can deploy your app manually. If you've followed the setup instructions already, all you need to do is run this:
+
+```sh
+# preview deployment
+netlify deploy --build
+
+# production deployment
+netlify deploy --build --prod
+```
