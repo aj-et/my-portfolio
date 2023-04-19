@@ -6,20 +6,25 @@ This web app will be used to showcase all of my previous projects and future pro
 
 The purpose of creating this portfolio is to combine all of my learnings and create an ultimate website.
 
-{Provide a link to your YouTube demonstration.  It should be a one minute demo of the software running and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/4kE9xPNFmn0)
 
 # Development Environment
 
-I am using Remix for this software.
+* I am using Remix for this software.
 
-Remix is a full stack web framework that lets you focus on the user interface and work back through web standards to deliver a fast, slick, and resilient user experience. People are gonna love using your stuff.
+Remix is a full stack web framework that lets you focus on the user interface and work back through web standards to deliver a fast, slick, and resilient user experience.
+
+* I used netlify to deploy this app to a website
+
+Netlify is a remote-first cloud computing company that offers a development platform that includes build, deploy, and serverless backend services for web applications and dynamic websites.
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 * [Remix](https://remix.run/)
+* [Netlify](https://www.netlify.com/)
+
+
+# This section Contains the generated readme when the Remix app was created. This shows how to set up the app to netlify, how to go to developmer mode, and development mode.
 
 # Welcome to Remix!
 
